@@ -1,0 +1,15 @@
+.customHeading {
+  background-image: linear-gradient(to right, #e12826, #e12826);
+  background-size: 100% 0.35em;
+  background-repeat: no-repeat;
+  background-position: 0px 88%;
+}
+
+.customOverlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    80%,
+    rgba(0, 0, 0, 1)
+  );
+}
