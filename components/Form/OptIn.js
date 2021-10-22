@@ -34,7 +34,7 @@ const optins = [
 export default function OptIn() {
   return (
     <div>
-      <fieldset className="space-y-5 pt-2">
+      <fieldset className="space-y-5 pt-2 text-left">
         <legend className="sr-only">Email Opt-ins</legend>
         {optins.map((optin) => (
           <div key={optin} className="relative flex items-start">
