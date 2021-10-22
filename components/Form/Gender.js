@@ -7,12 +7,16 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Gender() {
-  const [selected, setSelected] = useState(options[0]);
+export default function Gender({ handleChooseRadial }) {
+  const [selected, setSelected] = useState(null);
+
   return (
     <div className="py-6 ">
       <h3 className="text-white text-center mb-6">What is your gender?</h3>
-      <RadioGroup value={selected} onChange={setSelected}>
+      <RadioGroup
+        value={selected}
+        onChange={(e) => handleChooseRadial(e, setSelected, "gender")}
+      >
         <RadioGroup.Label className="sr-only">Privacy setting</RadioGroup.Label>
         <div className="bg-white rounded-md -space-y-px">
           {options.map((option, i) => (

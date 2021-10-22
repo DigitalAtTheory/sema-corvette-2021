@@ -1,4 +1,4 @@
-export default function Info() {
+export default function Info({ age, email, zipCode, handleInput }) {
   return (
     <div className="flex flex-col gap-2">
       <label htmlFor="age" className="sr-only">
@@ -8,6 +8,8 @@ export default function Info() {
         type="number"
         name="age"
         id="age"
+        value={age}
+        onChange={handleInput}
         className="shadow-sm focus:ring-reflex-500 focus:border-reflex-500 block w-full sm:text-sm border-gray-300 rounded-md"
         placeholder="Age"
       />
@@ -18,6 +20,8 @@ export default function Info() {
         type="email"
         name="email"
         id="email"
+        value={email}
+        onChange={handleInput}
         className="shadow-sm focus:ring-reflex-500 focus:border-reflex-500 block w-full sm:text-sm border-gray-300 rounded-md"
         placeholder="Email"
       />
@@ -28,6 +32,8 @@ export default function Info() {
         type="number"
         name="zipCode"
         id="zipCode"
+        value={zipCode}
+        onChange={handleInput}
         className="shadow-sm focus:ring-reflex-500 focus:border-reflex-500 block w-full sm:text-sm border-gray-300 rounded-md"
         placeholder="Zip Code"
       />
