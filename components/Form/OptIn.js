@@ -52,9 +52,9 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="manufacturer" className="text-gray-50 font-light">
-              I’d like to receive future special offers and promotions from the
+              {`I’d like to receive future special offers and promotions from the
               manufacturer of my vehicle (General Motors, Porsche Cars North
-              America, Toyota Motor North America, etc.)
+              America, Toyota Motor North America, etc.)`}
             </label>
           </div>
         </div>
@@ -73,8 +73,8 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="hoonigan" className="text-gray-50 font-light">
-              I'd like to stay updated with the details around the custom
-              Hoonigan build
+              {`I'd like to stay updated with the details around the custom
+              Hoonigan build`}
             </label>
           </div>
         </div>
@@ -93,8 +93,8 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="luftgekühlt" className="text-gray-50 font-light">
-              I'd like to stay updated with the details around the custom
-              Luftgekühlt build
+              {`I'd like to stay updated with the details around the custom
+              Luftgekühlt build`}
             </label>
           </div>
         </div>
@@ -113,8 +113,8 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="raceService" className="text-gray-50 font-light">
-              I'd like to stay updated with the details around the custom Race
-              Service build
+              {`I'd like to stay updated with the details around the custom Race
+              Service build`}
             </label>
           </div>
         </div>
