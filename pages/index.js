@@ -1,29 +1,24 @@
 import HeroContent from "../components/HeroContent";
 import Lockup from "../components/Lockup";
+import ProductBlock from "../components/ProductBlock";
 import SignUpBlock from "../components/SignUpBlock";
-import styles from "../styles/home.module.scss";
+import VideoBackground from "../components/VideoBackground";
+import Footer from "../components/Footer";
+import Form from "../components/Form/Form";
 
 export default function Home() {
   return (
     <>
-      <div className="relative w-full h-screen z-10 ">
-        <div
-          className={`${styles.customOverlay} absolute w-full h-full z-20`}
-        />
+      <VideoBackground>
         <Lockup />
         <HeroContent />
-        <div className="absolute h-full w-full top-0 z-0 ">
-          <video
-            className="relative h-full w-full object-cover z-0"
-            src="./headerVideo.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-          ></video>
-        </div>
+      </VideoBackground>
+      <div className="max-w-4xl mx-auto md:px-12 lg:px-24">
+        <SignUpBlock />
+        <ProductBlock />
+        <Form />
       </div>
-      <SignUpBlock />
+      <Footer />
     </>
   );
 }

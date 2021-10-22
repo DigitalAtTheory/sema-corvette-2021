@@ -12,7 +12,7 @@ export default function HeroContent() {
           height="199px"
         /> */}
         <h1
-          className={` px-2 mx-6 mt-4 text-4xl lg:text-5xl xl:text-6xl text-white text-center`}
+          className={`px-2 mx-6 mt-4 text-4xl lg:text-5xl xl:text-6xl text-white text-center`}
         >
           Welcome to the{" "}
           <span className={styles.customHeading}>unconventional</span>
