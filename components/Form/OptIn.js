@@ -31,6 +31,7 @@ export default function OptIn({
                 className="underline text-reflex-600"
                 href="https://corporate.exxonmobil.com/Global-legal-pages/privacy-policy"
                 target="_blank"
+                rel="noreferrer"
               >
                 ExxonMobil privacy policy.
               </a>
