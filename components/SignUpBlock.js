@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 export default function SignUpBlock() {
   return (
     <div className="text-center">
@@ -6,9 +8,13 @@ export default function SignUpBlock() {
         behind-the-scenes of exclusive Mobil 1 builds like Scotto's Corvette
         Stingray.`}
       </p>
-      <button className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto mt-10 py-3 rounded shadow-xl">
+      <Link
+        to="reflexForm"
+        smooth={true}
+        className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto mt-10 py-3 rounded shadow-xl block cursor-pointer"
+      >
         Sign Up
-      </button>
+      </Link>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FirstQuestion from "./FirstQuestion";
 import Gender from "./Gender";
 import Info from "./Info";
@@ -5,8 +6,18 @@ import OptIn from "./OptIn";
 import SecondQuestion from "./SecondQuestion";
 
 export default function Form() {
+  const [age, setAge] = useState("");
+  const [email, setEmail] = useState("");
+  const [zipCode, setZipCode] = useState("");
+
+  // const handleSubmit = () => {
+  //   const formData = {
+  //     entry_id:
+  //   }
+  // }
+
   return (
-    <div className="px-4 text-center">
+    <div id="reflexForm" className="px-4 text-center">
       <h2 className="text-white text-2xl text-center">Sign up, stay tuned</h2>
       <Gender />
       <Info />

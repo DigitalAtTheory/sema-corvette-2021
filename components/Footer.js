@@ -7,6 +7,7 @@ export default function Footer() {
         width="3634px"
         height="278px"
         alt=""
+        priority
       />
     </footer>
   );
