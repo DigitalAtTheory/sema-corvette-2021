@@ -37,7 +37,7 @@ export default function OptIn() {
       <fieldset className="space-y-5 pt-2">
         <legend className="sr-only">Email Opt-ins</legend>
         {optins.map((optin) => (
-          <div className="relative flex items-start">
+          <div key={optin} className="relative flex items-start">
             <div className="flex items-center h-5">
               <input
                 id={optin.id}
