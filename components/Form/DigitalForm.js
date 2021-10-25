@@ -2,7 +2,7 @@ import { useState } from "react";
 import FirstQuestion from "./FirstQuestion";
 import Gender from "./Gender";
 import Info from "./Info";
-import OptIn from "./OptIn";
+import DigitalOptins from "./DigitalOptins";
 import SecondQuestion from "./SecondQuestion";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
@@ -15,9 +15,7 @@ export default function Form() {
   const [zipCode, setZipCode] = useState("");
   const [privacyPolicy, setPrivacyPolicy] = useState(false);
   const [manufacturer, setManufacturer] = useState(false);
-  const [hoonigan, setHoonigan] = useState(false);
-  const [luftgekühlt, setLuftgekühlt] = useState(false);
-  const [raceService, setRaceService] = useState(false);
+  const [semaBuilds, setSemaBuilds] = useState(false);
   const [firstAnswer, setFirstAnswer] = useState(null);
   const [secondAnswer, setSecondAnswer] = useState(null);
   const [error, setError] = useState(false);
@@ -66,14 +64,8 @@ export default function Form() {
       case "manufacturer":
         manufacturer ? setManufacturer(false) : setManufacturer(true);
         break;
-      case "hoonigan":
-        hoonigan ? setHoonigan(false) : setHoonigan(true);
-        break;
-      case "luftgekühlt":
-        luftgekühlt ? setLuftgekühlt(false) : setLuftgekühlt(true);
-        break;
-      case "raceService":
-        raceService ? setRaceService(false) : setRaceService(true);
+      case "semaBuilds":
+        semaBuilds ? setSemaBuilds(false) : setSemaBuilds(true);
         break;
       default:
         break;
@@ -89,9 +81,7 @@ export default function Form() {
       zip_code: zipCode,
       privacy_policy: privacyPolicy,
       manufacturer,
-      hoonigan,
-      luftgekühlt,
-      race_service: raceService,
+      sema_builds: semaBuilds,
       oil_change: firstAnswer,
       personal_car: secondAnswer,
     };
@@ -117,9 +107,9 @@ export default function Form() {
     } else {
       if (error) setError(false);
 
-      await axios.post("/api/physical", formData);
+      await axios.post("/api/digital", formData);
 
-      router.push("/thank-you");
+      router.push("/digital/thank-you");
     }
 
     console.log(formData);
@@ -135,12 +125,10 @@ export default function Form() {
         zipCode={zipCode}
         handleInput={handleInput}
       />
-      <OptIn
+      <DigitalOptins
         privacyPolicy={privacyPolicy}
         manufacturer={manufacturer}
-        hoonigan={hoonigan}
-        luftgekühlt={luftgekühlt}
-        raceService={raceService}
+        semaBuilds={semaBuilds}
         handleOptin={handleOptin}
       />
       <FirstQuestion handleChooseRadial={handleChooseRadial} />

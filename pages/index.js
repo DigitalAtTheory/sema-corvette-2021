@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 import HeroContent from "../components/HeroContent";
 import Lockup from "../components/Lockup";
 import ProductBlock from "../components/ProductBlock";
@@ -21,6 +22,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Corvette - Unconventionally Driven</title>
+      </Head>
       {playVideo && <PlayVideo handleDonePlaying={handleDonePlaying} />}
       <VideoBackground>
         <Lockup />

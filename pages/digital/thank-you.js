@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
-import Lockup from "../components/Lockup";
-import ThankYouContent from "../components/ThankYouContent";
+import Lockup from "../../components/Lockup";
 import Image from "next/image";
-import WallpaperDownload from "../components/WallpaperDownload";
-import VideoLinks from "../components/VideoLinks";
+import Footer from "../../components/Footer";
+import WallpaperDownload from "../../components/WallpaperDownload";
+import VideoLinks from "../../components/VideoLinks";
+import DigitalThankYou from "../../components/digital/DigitalThankYou";
 
-export default function ThankYouPage() {
+export default function DigitalThankYouPage() {
   return (
     <div>
       <Head>
@@ -21,7 +21,7 @@ export default function ThankYouPage() {
         loading="eager"
       />
       <div className="max-w-3xl mx-auto">
-        <ThankYouContent />
+        <DigitalThankYou />
         <WallpaperDownload />
         <VideoLinks />
       </div>

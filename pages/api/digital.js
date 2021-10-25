@@ -13,14 +13,12 @@ module.exports = async (req, res) => {
     zip_code,
     privacy_policy,
     manufacturer,
-    hoonigan,
-    luftgekühlt,
-    race_service,
+    sema_builds,
     oil_change,
     personal_car,
   } = req.body;
 
-  base("Physical").create(
+  base("Digital").create(
     [
       {
         fields: {
@@ -31,9 +29,7 @@ module.exports = async (req, res) => {
           zip_code: parseInt(zip_code),
           privacy_policy,
           manufacturer,
-          hoonigan,
-          luftgekühlt,
-          race_service,
+          sema_builds,
           oil_change,
           personal_car,
         },
