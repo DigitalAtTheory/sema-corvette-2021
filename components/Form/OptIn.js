@@ -114,8 +114,7 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="raceService" className="text-gray-50 font-light">
-              {`I'd like to stay updated with the details around the custom Race
-              Service build`}
+              {`I'd like to stay updated with the details around the custom Ryan Tuerck build`}
             </label>
           </div>
         </div>
