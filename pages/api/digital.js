@@ -1,4 +1,5 @@
 import Airtable from "airtable";
+import axios from "axios";
 
 module.exports = async (req, res) => {
   const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
@@ -18,8 +19,37 @@ module.exports = async (req, res) => {
     personal_car,
   } = req.body;
 
-  base("Digital").create(
-    [
+  // base("Digital").create(
+  //   [
+  //     {
+  //       fields: {
+  //         entry_id,
+  //         gender,
+  //         age: parseInt(age),
+  //         email,
+  //         zip_code: parseInt(zip_code),
+  //         privacy_policy,
+  //         manufacturer,
+  //         sema_builds,
+  //         oil_change,
+  //         personal_car,
+  //       },
+  //     },
+  //   ],
+  //   function (err, records) {
+  //     if (err) {
+  //       console.error(err);
+  //       return;
+  //     }
+  //     records.forEach(function (record) {
+  //       console.log(record.getId());
+  //     });
+  //   }
+  // );
+
+  await axios
+    .post(
+      `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE}/Digital`,
       {
         fields: {
           entry_id,
@@ -34,17 +64,15 @@ module.exports = async (req, res) => {
           personal_car,
         },
       },
-    ],
-    function (err, records) {
-      if (err) {
-        console.error(err);
-        return;
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
+          "Content-Type": "application/json",
+        },
       }
-      records.forEach(function (record) {
-        console.log(record.getId());
-      });
-    }
-  );
+    )
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
 
   res.status(200).send("Logged");
 };
