@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function WallpaperDownload() {
+export default function WallpaperDownload({ wallpaperLink }) {
   return (
     <div className="text-center text-white px-4">
       <hr className="text-white my-16 w-1/2 mx-auto" />
@@ -11,7 +11,7 @@ export default function WallpaperDownload() {
         width="1170px"
         height="1310px"
       />
-      <Link href="/wallpapers">
+      <Link href={wallpaperLink}>
         <a className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto mt-6 py-3 rounded shadow-xl block cursor-pointer">
           Click to Download
         </a>

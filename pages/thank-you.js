@@ -22,7 +22,7 @@ export default function ThankYouPage() {
       />
       <div className="max-w-3xl mx-auto">
         <ThankYouContent />
-        <WallpaperDownload />
+        <WallpaperDownload wallpaperLink="/wallpapers" />
         <VideoLinks />
       </div>
       <Footer />

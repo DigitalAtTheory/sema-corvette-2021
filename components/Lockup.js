@@ -9,6 +9,8 @@ export default function Lockup() {
           width="467px"
           height="104px"
           alt="Mobil 1 and Corvette logo"
+          priority
+          loading="eager"
         />
       </div>
     </div>
