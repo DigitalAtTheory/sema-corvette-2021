@@ -3,7 +3,6 @@ import Lockup from "../../components/Lockup";
 import Image from "next/image";
 import Footer from "../../components/Footer";
 import WallpaperDownload from "../../components/WallpaperDownload";
-import VideoLinks from "../../components/VideoLinks";
 import DigitalThankYou from "../../components/digital/DigitalThankYou";
 
 export default function DigitalThankYouPage() {
@@ -23,7 +22,6 @@ export default function DigitalThankYouPage() {
       <div className="max-w-3xl mx-auto">
         <DigitalThankYou />
         <WallpaperDownload wallpaperLink="/digital/wallpapers" />
-        <VideoLinks />
       </div>
       <Footer />
     </div>

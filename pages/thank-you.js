@@ -4,7 +4,6 @@ import Lockup from "../components/Lockup";
 import ThankYouContent from "../components/ThankYouContent";
 import Image from "next/image";
 import WallpaperDownload from "../components/WallpaperDownload";
-import VideoLinks from "../components/VideoLinks";
 
 export default function ThankYouPage() {
   return (
@@ -23,7 +22,6 @@ export default function ThankYouPage() {
       <div className="max-w-3xl mx-auto">
         <ThankYouContent />
         <WallpaperDownload wallpaperLink="/wallpapers" />
-        <VideoLinks />
       </div>
       <Footer />
     </div>
