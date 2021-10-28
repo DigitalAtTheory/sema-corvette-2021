@@ -10,6 +10,7 @@ export default function WallpaperDownload({ wallpaperLink }) {
         src="/wallpaper-phone-corvette.png"
         width="1170px"
         height="1310px"
+        priority
       />
       <Link href={wallpaperLink}>
         <a className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto mt-6 py-3 rounded shadow-xl block cursor-pointer">
