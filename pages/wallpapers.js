@@ -7,7 +7,7 @@ export default function Wallpapers() {
         <title>Wallpapers - Unconventionally Driven</title>
       </Head>
       <h1 className="text-gray-50 mb-8 text-4xl">Download your wallpaper</h1>
-      <img src="/Physical-2021-SEMA-Mobile-Wallpaper-CORVETTE.jpg" />
+      <img src="/2021-SEMA-Mobile-Wallpaper-CORVETTE.jpg" />
     </div>
   );
 }
