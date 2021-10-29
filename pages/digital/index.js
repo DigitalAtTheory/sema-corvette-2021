@@ -5,6 +5,7 @@ import Lockup from "../../components/Lockup";
 import ProductBlock from "../../components/ProductBlock";
 import VideoBackground from "../../components/VideoBackground";
 import DigitalForm from "../../components/Form/DigitalForm";
+import Footer from "../../components/Footer";
 
 export default function DigitalPage() {
   return (
@@ -21,6 +22,7 @@ export default function DigitalPage() {
         <ProductBlock />
         <DigitalForm />
       </div>
+      <Footer />
     </>
   );
 }

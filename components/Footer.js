@@ -1,14 +1,9 @@
 import Image from "next/image";
+import footerLight from "../public/footer-light-leak.png";
 export default function Footer() {
   return (
     <footer className="flex align-bottom">
-      <Image
-        src="/footer-light-leak.png"
-        width="3634px"
-        height="278px"
-        alt=""
-        priority
-      />
+      <Image src={footerLight} placeholder="blur" alt="" priority />
     </footer>
   );
 }

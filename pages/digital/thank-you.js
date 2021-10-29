@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footer from "../../components/Footer";
 import WallpaperDownload from "../../components/WallpaperDownload";
 import DigitalThankYou from "../../components/digital/DigitalThankYou";
+import topLight from "../../public/top-light-leak.png";
 
 export default function DigitalThankYouPage() {
   return (
@@ -12,13 +13,7 @@ export default function DigitalThankYouPage() {
         <title>Thank You - Unconventionally Driven</title>
       </Head>
       <Lockup />
-      <Image
-        src="/top-light-leak.png"
-        width="3634px"
-        height="278px"
-        priority
-        loading="eager"
-      />
+      <Image src={topLight} placeholder="blur" priority loading="eager" />
       <div className="max-w-3xl mx-auto">
         <DigitalThankYou />
         <WallpaperDownload wallpaperLink="/digital/wallpapers" />

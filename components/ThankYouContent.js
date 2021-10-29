@@ -1,14 +1,10 @@
 import Image from "next/image";
+import confImage from "../public/corvette-confirmation-headline.png";
 
 export default function ThankYouContent() {
   return (
     <div className="text-white text-center px-4 font-light mt-6">
-      <Image
-        src="/corvette-confirmation-headline.png"
-        width="1170px"
-        height="365px"
-        priority
-      />
+      <Image src={confImage} placeholder="blur" priority loading="eager" />
       <p className="my-6">
         You came, you saw, and you conquered 2021. Prep for 2022 by snagging the
         SEMA Show-exclusive wallpaper below, and check out some of the content

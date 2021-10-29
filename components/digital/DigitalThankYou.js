@@ -1,14 +1,10 @@
 import Image from "next/image";
+import confImage from "../../public/corvette-confirmation-headline.png";
 
 export default function DigitalThankYou() {
   return (
     <div className="text-white text-center px-4 font-light mt-6">
-      <Image
-        src="/corvette-confirmation-headline.png"
-        width="1170px"
-        height="365px"
-        priority
-      />
+      <Image src={confImage} placeholder="blur" loading="eager" priority />
       <p className="my-6">
         Even though we missed you in-person, we wanted to leave you with a
         little something to feel like you were here with us. Snag the SEMA

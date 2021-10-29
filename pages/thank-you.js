@@ -4,6 +4,7 @@ import Lockup from "../components/Lockup";
 import ThankYouContent from "../components/ThankYouContent";
 import Image from "next/image";
 import WallpaperDownload from "../components/WallpaperDownload";
+import topLight from "../public/top-light-leak.png";
 
 export default function ThankYouPage() {
   return (
@@ -12,13 +13,7 @@ export default function ThankYouPage() {
         <title>Thank You - Unconventionally Driven</title>
       </Head>
       <Lockup />
-      <Image
-        src="/top-light-leak.png"
-        width="3634px"
-        height="278px"
-        priority
-        loading="eager"
-      />
+      <Image src={topLight} placeholder="blur" priority loading="eager" />
       <div className="max-w-3xl mx-auto">
         <ThankYouContent />
         <WallpaperDownload wallpaperLink="/wallpapers" />
