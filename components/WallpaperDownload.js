@@ -7,7 +7,7 @@ export default function WallpaperDownload({ wallpaperLink }) {
     <div className="text-center text-white px-4">
       <hr className="text-white my-16 w-1/2 mx-auto" />
       <h2 className="text-white mb-6 text-4xl">Download the Wallpaper</h2>
-      <Image src={phoneMockup} placeholder="blur" priority />
+      <Image src={phoneMockup} placeholder="blur" loading="eager" priority />
       <Link href={wallpaperLink}>
         <a className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto mt-6 py-3 rounded shadow-xl block cursor-pointer">
           Click to Download
