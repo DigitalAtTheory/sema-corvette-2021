@@ -8,7 +8,16 @@ export default function BuildContent() {
         Go behind the build
       </h1>
       <div className={`${styles.videoContainer} p-4`}>
-        <ReactPlayer url="https://www.youtube.com/watch?v=iIEh1hyPWuk" />
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=iIEh1hyPWuk"
+          config={{
+            youtube: {
+              playerVars: {
+                controls: 1,
+              },
+            },
+          }}
+        />
       </div>
     </div>
   );
