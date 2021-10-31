@@ -14,7 +14,7 @@ export default function HeroContent({ handlePlayVideo }) {
           onClick={handlePlayVideo}
           className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto mt-10 py-3 rounded shadow-xl"
         >
-          Show Me More
+          A message from Scotto
         </button>
       </div>
     </div>

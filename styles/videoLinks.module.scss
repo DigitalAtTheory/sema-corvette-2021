@@ -1,7 +1,8 @@
 .videoContainer {
   div {
-    width: auto !important;
+    width: 100% !important;
     height: auto !important;
+    aspect-ratio: 16 / 9;
   }
 
   iframe {

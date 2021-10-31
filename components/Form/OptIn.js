@@ -74,8 +74,7 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="hoonigan" className="text-gray-50 font-light">
-              {`I'd like to stay updated with the details around the custom
-              Hoonigan build`}
+              {`I'd like to stay updated with the details around the Hoonigan x Mobil 1 Corvette build.`}
             </label>
           </div>
         </div>
@@ -94,8 +93,7 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="luftgekühlt" className="text-gray-50 font-light">
-              {`I'd like to stay updated with the details around the custom
-              Luftgekühlt build`}
+              {`I'd like to stay updated with the details around the Luftgekühlt x Mobil 1 build`}
             </label>
           </div>
         </div>
@@ -114,7 +112,7 @@ export default function OptIn({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="raceService" className="text-gray-50 font-light">
-              {`I'd like to stay updated with the details around the custom Ryan Tuerck build`}
+              {`I'd like to stay updated with the details around the Ryan Tuerck x Mobil 1 build`}
             </label>
           </div>
         </div>

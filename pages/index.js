@@ -8,6 +8,7 @@ import VideoBackground from "../components/VideoBackground";
 import Footer from "../components/Footer";
 import Form from "../components/Form/Form";
 import PlayVideo from "../components/PlayVideo";
+import BuildContent from "../components/BuildContent";
 
 export default function Home() {
   const [playVideo, setPlayVideo] = useState(false);
@@ -26,13 +27,14 @@ export default function Home() {
         <title>Corvette - Unconventionally Driven</title>
       </Head>
       {playVideo && <PlayVideo handleDonePlaying={handleDonePlaying} />}
-      <VideoBackground>
+      <VideoBackground videoPath="/SEMA_SCOTTO_C8_02.mp4">
         <Lockup />
         <HeroContent handlePlayVideo={handlePlayVideo} />
       </VideoBackground>
       <div className="max-w-4xl mx-auto md:px-12 lg:px-24">
         <SignUpBlock />
         <ProductBlock />
+        <BuildContent />
         <Form />
       </div>
       <Footer />
