@@ -5,6 +5,7 @@ import ThankYouContent from "../components/ThankYouContent";
 import Image from "next/image";
 import WallpaperDownload from "../components/WallpaperDownload";
 import topLight from "../public/top-light-leak.png";
+import BuildContent from "../components/BuildContent";
 
 export default function ThankYouPage() {
   return (
@@ -17,6 +18,7 @@ export default function ThankYouPage() {
       <div className="max-w-3xl mx-auto">
         <ThankYouContent />
         <WallpaperDownload wallpaperLink="/wallpapers" />
+        <BuildContent />
       </div>
       <Footer />
     </div>
