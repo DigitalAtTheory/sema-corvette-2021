@@ -135,6 +135,9 @@ export default function Form() {
         zipCode={zipCode}
         handleInput={handleInput}
       />
+
+      <FirstQuestion handleChooseRadial={handleChooseRadial} />
+      <SecondQuestion handleChooseRadial={handleChooseRadial} />
       <OptIn
         privacyPolicy={privacyPolicy}
         manufacturer={manufacturer}
@@ -143,8 +146,6 @@ export default function Form() {
         raceService={raceService}
         handleOptin={handleOptin}
       />
-      <FirstQuestion handleChooseRadial={handleChooseRadial} />
-      <SecondQuestion handleChooseRadial={handleChooseRadial} />
       <button
         onClick={handleSubmit}
         className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto my-10 py-3 rounded shadow-xl"
