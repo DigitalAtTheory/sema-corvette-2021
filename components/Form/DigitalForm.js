@@ -7,6 +7,7 @@ import SecondQuestion from "./SecondQuestion";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Loader from "../Loader";
 
 export default function Form() {
   const [gender, setGender] = useState(null);
@@ -20,6 +21,8 @@ export default function Form() {
   const [secondAnswer, setSecondAnswer] = useState(null);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Count me in");
 
   const router = useRouter();
 
@@ -73,6 +76,7 @@ export default function Form() {
   };
 
   const handleSubmit = async () => {
+    setLoading(true);
     const formData = {
       entry_id: uuidv4(),
       gender,
@@ -107,9 +111,19 @@ export default function Form() {
     } else {
       if (error) setError(false);
 
-      await axios.post("/api/digital", formData);
+      await axios.post("/api/digital", formData).catch((err) => {
+        console.error(err.message);
+        setError(true);
+        setErrorMessage(
+          "Something went wrong. Try again. Make sure you are using an actual email."
+        );
+      });
+      setButtonText("Thank You!");
+      setLoading(false);
+    }
 
-      router.push("/digital/thank-you");
+    if (!error) {
+      router.push("/virtual/thank-you");
     }
 
     console.log(formData);
@@ -137,7 +151,8 @@ export default function Form() {
         onClick={handleSubmit}
         className="bg-reflex-600 text-white w-3/4 lg:w-1/2 mx-auto my-10 py-3 rounded shadow-xl"
       >
-        Count me in
+        {loading && <Loader />}
+        {!loading && buttonText}
       </button>
       {error && (
         <div className="text-reflex-400">
